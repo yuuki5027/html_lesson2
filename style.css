@@ -1,0 +1,138 @@
+@charset "UTF-8";
+/* --------------------
+
+初期設定
+
+----------------------- */
+body {
+  font-family: "游ゴシック Medium", YuGothic, YuGothicM, "Hiragino Kaku Gothic ProN", "Hiragino Kaku Gothic Pro", メイリオ, Meiryo, sans-serif; }
+
+/* --------------------
+
+トップページ
+
+----------------------- */
+header .logo {
+  font-size: 3.4rem; }
+
+.header-inner,
+.main-inner {
+  max-width: 650px;
+  margin: auto;
+  padding: 0 20px; }
+
+.header-inner {
+  height: 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center; }
+
+.main-inner h2 {
+  font-size: 2.6rem;
+  margin-bottom: 20px; }
+.main-inner p {
+  font-size: 1.5rem;
+  line-height: 1.6; }
+
+.article-section {
+  margin-bottom: 40px; }
+
+.main-visual {
+  background-image: url(img/nettaigyo.jpg);
+  height: 60vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-bottom: 55px; }
+
+.price-wrapper p {
+  margin-bottom: 20px; }
+.price-wrapper table,
+.price-wrapper th,
+.price-wrapper td {
+  border-collapse: collapse;
+  border: 1px solid black; }
+.price-wrapper table {
+  width: 100%; }
+.price-wrapper th,
+.price-wrapper td {
+  padding: 15px; }
+.price-wrapper th {
+  font-size: 1.8rem;
+  width: 150px;
+  background: #eee; }
+.price-wrapper td {
+  font-size: 1.6rem; }
+
+.notice-wrapper li {
+  font-size: 1.6rem;
+  line-height: 1.6;
+  margin-bottom: 10px; }
+
+.article {
+  margin-bottom: 55px; }
+
+footer {
+  background: #eee; }
+
+.footer-inner {
+  max-width: 650px;
+  height: 100px;
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center; }
+  .footer-inner small {
+    font-size: 1.3rem; }
+
+.article-title {
+  background-image: url(img/niconico_bg_blue.png);
+  padding: 15px;
+  text-align: center;
+  color: #fff;
+  letter-spacing: 0.3rem;
+  font-weight: normal;
+  -height: 1.2; }
+
+.article-section figure {
+  margin-right: 20px; }
+  .article-section figure img {
+    width: 200px;
+    height: 200px;
+    -o-object-fit: cover;
+       object-fit: cover; }
+.article-section:nth-of-type(2) img {
+  -o-object-position: 0 -30px;
+     object-position: 0 -30px; }
+.article-section:nth-of-type(3) img {
+  -o-object-position: -60px -10px;
+     object-position: -60px -10px; }
+
+.article-body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+
+.price, .notice {
+  margin-bottom: 55px; }
+  .price h2, .notice h2 {
+    padding: 15px 0 15px 10px;
+    border-width: 0 0 1px 5px;
+    border: solid #000;
+    border-width: 0 0 1px 8px;
+    border-left: 8px solid #6f8ec9; }
+
+.notice-wrapper li {
+  list-style-position: inside; }
