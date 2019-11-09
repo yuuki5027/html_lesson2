@@ -6,6 +6,7 @@
 
 body {
 	font-family: "游ゴシック Medium", YuGothic, YuGothicM, "Hiragino Kaku Gothic ProN", "Hiragino Kaku Gothic Pro", メイリオ, Meiryo, sans-serif;
+	background: linear-gradient(#fff 0%, #cfe1fc 100%);
 }
 
 /* --------------------
@@ -16,20 +17,23 @@ body {
 
 header {
 	.logo {
-		font-size: 3.4rem;
+		img {
+			width: 150px;
+			height: auto;
+		}
 
 	}
 }
 
 .header-inner,
 .main-inner {
-	max-width: 650px;
+	max-width: 770px;
 	margin: auto;
 	padding: 0 20px;
 }
 
 .header-inner {
-	height: 100px;
+	height: 80px;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
@@ -50,7 +54,7 @@ header {
 
 .article-section {
 	margin-bottom: 40px;
-	
+
 }
 
 .main-visual {
@@ -91,6 +95,7 @@ header {
 
 	td {
 		font-size: 1.6rem;
+		background: #fff;
 	}
 }
 
@@ -105,13 +110,8 @@ header {
 .article {
 	margin-bottom: 55px;
 }
-
-footer {
-	background: #eee;
-}
-
 .footer-inner {
-	max-width: 650px;
+	max-width: 770px;
 	height: 100px;
 	margin: auto;
 	display: flex;
@@ -136,6 +136,7 @@ footer {
 .article-section {
 	figure {
 		margin-right: 20px;
+
 		img {
 			width: 200px;
 			height: 200px;
@@ -143,34 +144,63 @@ footer {
 		}
 
 	}
+
 	&:nth-of-type(2) {
 		img {
-			object-position: 0 -30px; 
+			object-position: 0 -30px;
 		}
 	}
+
 	&:nth-of-type(3) {
 		img {
-			object-position: -60px -10px; 
+			object-position: -60px -10px;
 		}
-	}	
+	}
 }
 
 .article-body {
 	display: flex;
 }
-.price, .notice {
+
+.price,
+.notice {
 	margin-bottom: 55px;
+
 	h2 {
 		padding: 15px 0 15px 10px;
 		border-width: 0 0 1px 5px;
 		border: solid #000;
 		border-width: 0 0 1px 8px;
-		border-left: 8px solid #6f8ec9;	
+		border-left: 8px solid #6f8ec9;
 	}
 }
 
 .notice-wrapper {
 	li {
 		list-style-position: inside;
+	}
+}
+
+.global-nav {
+	position: relative;
+	width: 200px;
+	height: 45px;
+
+	a {
+		display: inline-block;
+		width: 200px;
+		padding: 15px 0;
+		background: #e6dd01;
+		color: #41487e;
+		text-align: center;
+		font-size: 1.5rem;
+		box-shadow: 0 5px 0 #aaa;
+
+		&:hover {
+			position: absolute;
+			top: 3px;
+			left: 0;
+			box-shadow: none;
+		}
 	}
 }

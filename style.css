@@ -5,24 +5,27 @@
 
 ----------------------- */
 body {
-  font-family: "游ゴシック Medium", YuGothic, YuGothicM, "Hiragino Kaku Gothic ProN", "Hiragino Kaku Gothic Pro", メイリオ, Meiryo, sans-serif; }
+  font-family: "游ゴシック Medium", YuGothic, YuGothicM, "Hiragino Kaku Gothic ProN", "Hiragino Kaku Gothic Pro", メイリオ, Meiryo, sans-serif;
+  background: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#cfe1fc));
+  background: linear-gradient(#fff 0%, #cfe1fc 100%); }
 
 /* --------------------
 
 トップページ
 
 ----------------------- */
-header .logo {
-  font-size: 3.4rem; }
+header .logo img {
+  width: 150px;
+  height: auto; }
 
 .header-inner,
 .main-inner {
-  max-width: 650px;
+  max-width: 770px;
   margin: auto;
   padding: 0 20px; }
 
 .header-inner {
-  height: 100px;
+  height: 80px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -68,7 +71,8 @@ header .logo {
   width: 150px;
   background: #eee; }
 .price-wrapper td {
-  font-size: 1.6rem; }
+  font-size: 1.6rem;
+  background: #fff; }
 
 .notice-wrapper li {
   font-size: 1.6rem;
@@ -78,11 +82,8 @@ header .logo {
 .article {
   margin-bottom: 55px; }
 
-footer {
-  background: #eee; }
-
 .footer-inner {
-  max-width: 650px;
+  max-width: 770px;
   height: 100px;
   margin: auto;
   display: -webkit-box;
@@ -125,9 +126,11 @@ footer {
   display: -ms-flexbox;
   display: flex; }
 
-.price, .notice {
+.price,
+.notice {
   margin-bottom: 55px; }
-  .price h2, .notice h2 {
+  .price h2,
+  .notice h2 {
     padding: 15px 0 15px 10px;
     border-width: 0 0 1px 5px;
     border: solid #000;
@@ -136,3 +139,26 @@ footer {
 
 .notice-wrapper li {
   list-style-position: inside; }
+
+.global-nav {
+  position: relative;
+  width: 200px;
+  height: 45px; }
+  .global-nav a {
+    display: inline-block;
+    width: 200px;
+    padding: 15px 0;
+    background: #e6dd01;
+    color: #41487e;
+    text-align: center;
+    font-size: 1.5rem;
+    -webkit-box-shadow: 0 5px 0 #aaa;
+            box-shadow: 0 5px 0 #aaa; }
+    .global-nav a:hover {
+      position: absolute;
+      top: 3px;
+      left: 0;
+      -webkit-box-shadow: none;
+              box-shadow: none; }
+
+/*# sourceMappingURL=style.css.map */
