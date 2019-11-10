@@ -43,7 +43,6 @@ header {
 .main-inner {
 	h2 {
 		font-size: 2.6rem;
-		margin-bottom: 20px;
 	}
 
 	p {
@@ -56,16 +55,45 @@ header {
 	margin-bottom: 40px;
 
 }
-
-.main-visual {
-	background-image: url(img/nettaigyo.jpg);
+.visual-box {
+	position: relative;
+	width: 100vw;
 	height: 60vh;
+	margin-bottom: 55px;
+	display: flex;
+	align-items: center;
+}
+.main-visual {
+	position: absolute;
+	background-image: url(img/nettaigyo.jpg);
+	width: 100vw;
+	height: 60vh;
+	left: 0;
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
-	margin-bottom: 55px;
+	
 }
-
+.color-box {
+	position: absolute;
+	width: 40vw;
+	height: 50vh;
+	left: 0;
+	z-index: 2;
+	background: #1205f2;
+	opacity: 0.8;
+}
+.copy {
+	position: absolute;
+	width: 680px;
+	top: 50%;
+	left: 50%;
+	transform: translate(-80%,-50%);
+	z-index: 3;
+	color: #fff;
+	font-size: 10rem;
+	font-weight: bold;
+}
 .price-wrapper {
 	p {
 		margin-bottom: 20px;
@@ -130,17 +158,28 @@ header {
 	color: #fff;
 	letter-spacing: 0.3rem;
 	font-weight: normal;
-	-height: 1.2;
+	line-height: 1.2;
 }
 
 .article-section {
+	transition: .5s;
+	&:hover {
+		box-shadow: 0 0 10px rgba(0,0,0,.5);
+		img {
+			transform: scale(1.2,1.2);
+		}
+	}
 	figure {
+		display: block;
 		margin-right: 20px;
-
+		width: 200px;
+		height: 200px;
+		overflow: hidden;
 		img {
 			width: 200px;
 			height: 200px;
 			object-fit: cover;
+			transition: .5s;
 		}
 
 	}
@@ -156,10 +195,15 @@ header {
 			object-position: -60px -10px;
 		}
 	}
+	p {
+		width: 70%;
+	}
 }
 
 .article-body {
 	display: flex;
+	padding: 20px;
+	background: #fff;
 }
 
 .price,
