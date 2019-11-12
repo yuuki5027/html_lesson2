@@ -17,12 +17,19 @@ body {
 header .logo img {
   width: 150px;
   height: auto; }
+  @media (max-width: 560px) {
+    header .logo img {
+      width: 125px; } }
 
 .header-inner,
 .main-inner {
   max-width: 770px;
   margin: auto;
   padding: 0 20px; }
+  @media (max-width: 560px) {
+    .header-inner,
+    .main-inner {
+      padding: 0 10px; } }
 
 .header-inner {
   height: 80px;
@@ -49,13 +56,7 @@ header .logo img {
   position: relative;
   width: 100vw;
   height: 60vh;
-  margin-bottom: 55px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center; }
+  margin-bottom: 55px; }
 
 .main-visual {
   position: absolute;
@@ -72,9 +73,22 @@ header .logo img {
   width: 40vw;
   height: 50vh;
   left: 0;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  left: 0;
   z-index: 2;
   background: #1205f2;
   opacity: 0.8; }
+  @media (max-width: 960px) {
+    .color-box {
+      width: 100vw;
+      height: 80px;
+      top: auto;
+      bottom: 0;
+      left: 50%;
+      -webkit-transform: translate(-50%, 0);
+              transform: translate(-50%, 0); } }
 
 .copy {
   position: absolute;
@@ -87,6 +101,33 @@ header .logo img {
   color: #fff;
   font-size: 10rem;
   font-weight: bold; }
+  @media (min-width: 961px) and (max-width: 1440px) {
+    .copy {
+      width: 537px;
+      font-size: 8rem; } }
+  @media (max-width: 960px) {
+    .copy {
+      width: 80vw;
+      text-align: right;
+      top: auto;
+      bottom: 0;
+      left: auto;
+      right: 0;
+      -webkit-transform: translate(0, -60%);
+              transform: translate(0, -60%);
+      font-size: 6.5rem; } }
+  @media (max-width: 560px) {
+    .copy {
+      width: 100vw;
+      font-size: 5.5rem;
+      text-align: center;
+      -webkit-transform: translate(0, -20%);
+              transform: translate(0, -20%); } }
+  @media (max-width: 376px) {
+    .copy {
+      font-size: 4.5rem;
+      -webkit-transform: translate(0, -40%);
+              transform: translate(0, -40%); } }
 
 .price-wrapper p {
   margin-bottom: 20px; }
@@ -102,8 +143,9 @@ header .logo img {
   padding: 15px; }
 .price-wrapper th {
   font-size: 1.8rem;
-  width: 150px;
-  background: #eee; }
+  width: 35%;
+  background: #6f8ec9;
+  color: #eee; }
 .price-wrapper td {
   font-size: 1.6rem;
   background: #fff; }
@@ -112,6 +154,9 @@ header .logo img {
   font-size: 1.6rem;
   line-height: 1.6;
   margin-bottom: 10px; }
+  @media (max-width: 560px) {
+    .notice-wrapper li {
+      font-size: 1.4rem; } }
 
 .article {
   margin-bottom: 55px; }
@@ -144,6 +189,9 @@ header .logo img {
 .article-section {
   -webkit-transition: .5s;
   transition: .5s; }
+  @media (max-width: 560px) {
+    .article-section .article-title {
+      font-size: 2.0rem; } }
   .article-section:hover {
     -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); }
@@ -155,7 +203,17 @@ header .logo img {
     margin-right: 20px;
     width: 200px;
     height: 200px;
-    overflow: hidden; }
+    overflow: hidden;
+    -webkit-box-flex: 0;
+        -ms-flex-positive: 0;
+            flex-grow: 0;
+    -ms-flex-negative: 0;
+        flex-shrink: 0; }
+    @media (max-width: 560px) {
+      .article-section figure {
+        margin-right: 0;
+        margin-bottom: 20px;
+        width: 100%; } }
     .article-section figure img {
       width: 200px;
       height: 200px;
@@ -163,12 +221,28 @@ header .logo img {
          object-fit: cover;
       -webkit-transition: .5s;
       transition: .5s; }
+      @media (max-width: 560px) {
+        .article-section figure img {
+          width: 100%; } }
   .article-section:nth-of-type(2) img {
     -o-object-position: 0 -30px;
        object-position: 0 -30px; }
+    @media (max-width: 560px) {
+      .article-section:nth-of-type(2) img {
+        -o-object-position: 0 -180px;
+           object-position: 0 -180px; } }
+  @media (max-width: 560px) and (max-width: 376px) {
+    .article-section:nth-of-type(2) img {
+      -o-object-position: 0 -80px;
+         object-position: 0 -80px; } }
+
   .article-section:nth-of-type(3) img {
     -o-object-position: -60px -10px;
        object-position: -60px -10px; }
+    @media (max-width: 560px) {
+      .article-section:nth-of-type(3) img {
+        -o-object-position: 0px -10px;
+           object-position: 0px -10px; } }
   .article-section p {
     width: 70%; }
 
@@ -178,6 +252,15 @@ header .logo img {
   display: flex;
   padding: 20px;
   background: #fff; }
+  @media (max-width: 560px) {
+    .article-body {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column; }
+      .article-body p {
+        font-size: 1.4rem;
+        width: 100%; } }
 
 .price,
 .notice {
@@ -188,15 +271,38 @@ header .logo img {
     border-width: 0 0 1px 5px;
     border: solid #000;
     border-width: 0 0 1px 8px;
-    border-left: 8px solid #6f8ec9; }
+    border-left: 10px solid #6f8ec9;
+    margin-bottom: 20px; }
+    @media (max-width: 560px) {
+      .price h2,
+      .notice h2 {
+        padding: 10px 0 10px 10px;
+        font-size: 2.0rem; } }
 
-.notice-wrapper li {
-  list-style-position: inside; }
+.notice-wrapper ul {
+  padding-left: 10px; }
+  .notice-wrapper ul li {
+    list-style-type: none;
+    position: relative;
+    padding-left: 13px; }
+    .notice-wrapper ul li:after {
+      display: block;
+      content: "";
+      position: absolute;
+      top: 8px;
+      left: 0;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: #6f8ec9; }
 
 .global-nav {
   position: relative;
   width: 200px;
   height: 45px; }
+  @media (max-width: 560px) {
+    .global-nav {
+      width: 150px; } }
   .global-nav a {
     display: inline-block;
     width: 200px;
@@ -207,6 +313,9 @@ header .logo img {
     font-size: 1.5rem;
     -webkit-box-shadow: 0 5px 0 #aaa;
             box-shadow: 0 5px 0 #aaa; }
+    @media (max-width: 560px) {
+      .global-nav a {
+        width: 150px; } }
     .global-nav a:hover {
       position: absolute;
       top: 3px;

@@ -1,9 +1,9 @@
+@import "mixin";
 /* --------------------
 
 初期設定
 
 ----------------------- */
-
 body {
 	font-family: "游ゴシック Medium", YuGothic, YuGothicM, "Hiragino Kaku Gothic ProN", "Hiragino Kaku Gothic Pro", メイリオ, Meiryo, sans-serif;
 	background: linear-gradient(#fff 0%, #cfe1fc 100%);
@@ -20,6 +20,9 @@ header {
 		img {
 			width: 150px;
 			height: auto;
+			@include sp {
+				width: 125px;
+			}
 		}
 
 	}
@@ -30,6 +33,9 @@ header {
 	max-width: 770px;
 	margin: auto;
 	padding: 0 20px;
+	@include sp {
+		padding: 0 10px;
+	}
 }
 
 .header-inner {
@@ -60,8 +66,6 @@ header {
 	width: 100vw;
 	height: 60vh;
 	margin-bottom: 55px;
-	display: flex;
-	align-items: center;
 }
 .main-visual {
 	position: absolute;
@@ -79,9 +83,20 @@ header {
 	width: 40vw;
 	height: 50vh;
 	left: 0;
+	top: 50%;
+	transform: translateY(-50%);
+	left: 0;
 	z-index: 2;
 	background: #1205f2;
 	opacity: 0.8;
+	@include tab {
+		width: 100vw;
+		height: 80px;
+		top: auto;
+		bottom: 0;
+		left: 50%;
+		transform: translate(-50%,0);	
+	}
 }
 .copy {
 	position: absolute;
@@ -93,6 +108,30 @@ header {
 	color: #fff;
 	font-size: 10rem;
 	font-weight: bold;
+	@include pc-s {
+		width: 537px;
+		font-size: 8rem;
+	}
+	@include tab {
+		width: 80vw;
+		text-align: right;
+		top: auto;
+		bottom: 0;
+		left: auto;
+		right: 0;
+		transform: translate(0,-60%);
+		font-size: 6.5rem;
+	}
+	@include sp {
+		width: 100vw;
+		font-size: 5.5rem;
+		text-align: center;
+		transform: translate(0,-20%);
+	}
+	@include sp-s {
+		font-size: 4.5rem;
+		transform: translate(0,-40%);
+	}
 }
 .price-wrapper {
 	p {
@@ -117,8 +156,9 @@ header {
 
 	th {
 		font-size: 1.8rem;
-		width: 150px;
-		background: #eee;
+		width: 35%;
+		background: #6f8ec9;
+		color: #eee;
 	}
 
 	td {
@@ -132,6 +172,9 @@ header {
 		font-size: 1.6rem;
 		line-height: 1.6;
 		margin-bottom: 10px;
+		@include sp {
+			font-size: 1.4rem;
+		}
 	}
 }
 
@@ -162,6 +205,11 @@ header {
 }
 
 .article-section {
+	.article-title {
+		@include sp {
+			font-size: 2.0rem;
+		}
+	}
 	transition: .5s;
 	&:hover {
 		box-shadow: 0 0 10px rgba(0,0,0,.5);
@@ -175,11 +223,21 @@ header {
 		width: 200px;
 		height: 200px;
 		overflow: hidden;
+		flex-grow: 0;
+		flex-shrink: 0;
+		@include sp {
+			margin-right: 0;
+			margin-bottom: 20px;
+			width: 100%;
+		}
 		img {
 			width: 200px;
 			height: 200px;
 			object-fit: cover;
 			transition: .5s;
+			@include sp {
+				width: 100%;
+			}
 		}
 
 	}
@@ -187,13 +245,22 @@ header {
 	&:nth-of-type(2) {
 		img {
 			object-position: 0 -30px;
+			@include sp {
+				object-position: 0 -180px;
+				@include sp-s {
+					object-position: 0 -80px;
+				}
+			}
 		}
 	}
 
 	&:nth-of-type(3) {
 		img {
 			object-position: -60px -10px;
-		}
+			@include sp {
+				object-position: 0px -10px;
+			}
+		}	
 	}
 	p {
 		width: 70%;
@@ -204,6 +271,15 @@ header {
 	display: flex;
 	padding: 20px;
 	background: #fff;
+	@include sp {
+		flex-direction: column;
+		
+		p {
+			font-size: 1.4rem;
+			width: 100%;
+		}
+		
+	}
 }
 
 .price,
@@ -215,20 +291,45 @@ header {
 		border-width: 0 0 1px 5px;
 		border: solid #000;
 		border-width: 0 0 1px 8px;
-		border-left: 8px solid #6f8ec9;
+		border-left: 10px solid #6f8ec9;
+		margin-bottom: 20px;
+		@include sp {
+			padding: 10px 0 10px 10px;
+			font-size: 2.0rem;
+		}
 	}
 }
 
 .notice-wrapper {
-	li {
-		list-style-position: inside;
+	ul {
+		padding-left: 10px;
+		li {
+			list-style-type: none;
+			position: relative;
+			padding-left: 13px;
+			&:after {
+				display: block;
+				content: "";
+				position: absolute;
+				top: 8px;
+				left: 0;
+				width: 8px;
+				height: 8px;
+				border-radius: 50%;
+				background: #6f8ec9;
+			}
+		}
 	}
+
 }
 
 .global-nav {
 	position: relative;
 	width: 200px;
 	height: 45px;
+	@include sp {
+		width: 150px;
+	}
 
 	a {
 		display: inline-block;
@@ -239,6 +340,9 @@ header {
 		text-align: center;
 		font-size: 1.5rem;
 		box-shadow: 0 5px 0 #aaa;
+		@include sp {
+			width: 150px;
+		}
 
 		&:hover {
 			position: absolute;
