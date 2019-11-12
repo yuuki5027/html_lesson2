@@ -14,12 +14,18 @@ body {
 トップページ
 
 ----------------------- */
-header .logo img {
-  width: 150px;
-  height: auto; }
-  @media (max-width: 560px) {
-    header .logo img {
-      width: 125px; } }
+header {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: #fff; }
+  header .logo img {
+    width: 150px;
+    height: auto; }
+    @media (max-width: 560px) {
+      header .logo img {
+        width: 125px; } }
 
 .header-inner,
 .main-inner {
@@ -55,18 +61,25 @@ header .logo img {
 .visual-box {
   position: relative;
   width: 100vw;
-  height: 60vh;
+  height: 100vh;
   margin-bottom: 55px; }
+  @media (max-width: 960px) {
+    .visual-box {
+      height: 60vh; } }
 
 .main-visual {
   position: absolute;
   background-image: url(img/nettaigyo.jpg);
   width: 100vw;
-  height: 60vh;
+  height: 100vh;
   left: 0;
   background-position: center;
   background-repeat: no-repeat;
-  background-size: cover; }
+  background-size: cover;
+  background-attachment: fixed; }
+  @media (max-width: 960px) {
+    .main-visual {
+      height: 60vh; } }
 
 .color-box {
   position: absolute;

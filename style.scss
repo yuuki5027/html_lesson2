@@ -16,6 +16,10 @@ body {
 ----------------------- */
 
 header {
+	position: sticky;
+	top: 0;
+	z-index: 10;
+	background: #fff;
 	.logo {
 		img {
 			width: 150px;
@@ -64,19 +68,25 @@ header {
 .visual-box {
 	position: relative;
 	width: 100vw;
-	height: 60vh;
+	height: 100vh;
 	margin-bottom: 55px;
+	@include tab {
+		height: 60vh;
+	}
 }
 .main-visual {
 	position: absolute;
 	background-image: url(img/nettaigyo.jpg);
 	width: 100vw;
-	height: 60vh;
+	height: 100vh;
 	left: 0;
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
-	
+	background-attachment: fixed;
+	@include tab {
+		height: 60vh;
+	}
 }
 .color-box {
 	position: absolute;
