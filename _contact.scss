@@ -1,0 +1,31 @@
+.contact-page {
+	h1,form {
+		max-width: 770px;
+		margin: auto;
+		padding: 0 80px;
+	}
+	h1 {
+		font-size: 3.2rem;
+		margin: 50px auto;
+	}
+	.item {
+		display: flex;
+		margin-bottom: 30px;
+	}
+	.label {
+		width: 35%;
+		display: inline-block;
+		font-size: 1.6rem;
+		padding: 10px 20px;
+		border-left: 8px blue solid;
+		flex-grow: 0;
+		flex-shrink: 0;
+	}
+	.inputs {
+		width: 75%;
+		border-radius: 5px;
+	}
+	.comment {
+		height: 46px;
+	}	 
+}

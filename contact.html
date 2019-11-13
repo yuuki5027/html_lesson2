@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ja">
+	<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>お問い合わせフォーム</title>
+	<link rel="stylesheet" href="reset.css">
+	<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+	<header>
+		<div class="header-inner">
+			<h1 class="logo"><img src="img/naqualogo.png" alt=""></h1>
+			<nav class="global-nav">
+				<a href="">お問い合わせ</a>
+			</nav>
+		</div>
+	</header>
+	<main class="contact-page">
+		<h1>お問い合わせ</h1>
+		<form action="thank.html">
+		
+			<div class="item">
+				<label for="name" class="label">名前：</label>
+				<input class="inputs" type="text" id="name" name="name">
+			</div>
+
+			<div class="item">
+				<label for="mail" class="label">メール：</label>
+				<input class="inputs" type="email" id="mail" name="mail">
+			</div>
+			
+			<div class="item">
+				<label for="title" class="label">タイトル：</label>
+				<input class="inputs" type="text" id="title" name="title">
+			</div>
+			
+			<div class="item">
+				<label for="comment" class="label comment">質問内容：</label>
+				<textarea class="inputs" name="comment" id="comment" cols="30" rows="10"></textarea>
+			</div>
+			
+			<div class="btn-area">
+				<input type="submit" value="送信する">
+			</div>			
+		</form>
+	</main>
+	<footer>
+		<div class="footer-inner">
+			<small>&copy; N水族館 2018</small>
+		</div>
+	</footer>
+</body></html>
+
+

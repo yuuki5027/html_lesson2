@@ -1,4 +1,5 @@
 @import "mixin";
+@import "contact";
 /* --------------------
 
 初期設定
@@ -7,6 +8,7 @@
 body {
 	font-family: "游ゴシック Medium", YuGothic, YuGothicM, "Hiragino Kaku Gothic ProN", "Hiragino Kaku Gothic Pro", メイリオ, Meiryo, sans-serif;
 	background: linear-gradient(#fff 0%, #cfe1fc 100%);
+	background-repeat: no-repeat;
 }
 
 /* --------------------
