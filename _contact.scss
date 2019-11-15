@@ -98,10 +98,10 @@ label {
 	label {
 		@include tab {
 			margin-bottom: 0;
+			font-size: 1.4rem;
 		}
 	}
 }
-
 
 select,
 .file {
@@ -122,5 +122,6 @@ select,
 
 	select {
 		width: 155px;
+		font-size: 1.4rem;
 	}
 }
