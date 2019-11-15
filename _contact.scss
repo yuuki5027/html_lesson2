@@ -1,17 +1,41 @@
 .contact-page {
-	h1,form {
-		max-width: 770px;
+	.header-inner {
+		max-width: 830px;
+	}
+
+	.title,
+	form {
+		max-width: 830px;
 		margin: auto;
 		padding: 0 80px;
+
+		@include tab {
+			padding: 0 10px;
+		}
 	}
-	h1 {
+
+	.title {
 		font-size: 3.2rem;
 		margin: 50px auto;
+
+		@include tab {
+			font-size: 2.8rem;
+		}
+
+		@include sp {
+			font-size: 2.2rem;
+		}
 	}
+
 	.item {
 		display: flex;
 		margin-bottom: 30px;
+
+		@include tab {
+			flex-direction: column;
+		}
 	}
+
 	.label {
 		width: 35%;
 		display: inline-block;
@@ -20,12 +44,83 @@
 		border-left: 8px blue solid;
 		flex-grow: 0;
 		flex-shrink: 0;
+
+		@include tab {
+			width: 100%;
+		}
 	}
-	.inputs {
-		width: 75%;
-		border-radius: 5px;
+
+	input:not([type="radio"]):not([type="checkbox"]) {
+		@include tab {
+			height: 40px;
+		}
 	}
-	.comment {
-		height: 46px;
-	}	 
+}
+
+.inputs {
+	width: 75%;
+	border-radius: 5px;
+
+	@include tab {
+		width: 100%;
+	}
+}
+
+.comment {
+	height: 46px;
+}
+
+label {
+	font-size: 1.5rem;
+
+	@include tab {
+		margin-bottom: 20px;
+	}
+}
+
+.radio {
+	width: 75%;
+	display: flex;
+	padding-top: 10px;
+
+	@include tab {
+		width: 100%;
+	}
+
+	input {
+		margin-left: 30px;
+
+		@include tab {
+			margin-left: 0;
+		}
+	}
+
+	label {
+		@include tab {
+			margin-bottom: 0;
+		}
+	}
+}
+
+
+select,
+.file {
+	margin-left: 30px;
+	padding-top: 10px;
+
+	@include tab {
+		margin-left: 0;
+	}
+}
+
+.impressions {
+	.label {
+		@include tab {
+			margin-bottom: 20px;
+		}
+	}
+
+	select {
+		width: 155px;
+	}
 }

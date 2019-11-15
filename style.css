@@ -1,16 +1,35 @@
 @charset "UTF-8";
-.contact-page h1, .contact-page form {
-  max-width: 770px;
+.contact-page .header-inner {
+  max-width: 830px; }
+.contact-page .title,
+.contact-page form {
+  max-width: 830px;
   margin: auto;
   padding: 0 80px; }
-.contact-page h1 {
+  @media (max-width: 960px) {
+    .contact-page .title,
+    .contact-page form {
+      padding: 0 10px; } }
+.contact-page .title {
   font-size: 3.2rem;
   margin: 50px auto; }
+  @media (max-width: 960px) {
+    .contact-page .title {
+      font-size: 2.8rem; } }
+  @media (max-width: 560px) {
+    .contact-page .title {
+      font-size: 2.2rem; } }
 .contact-page .item {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   margin-bottom: 30px; }
+  @media (max-width: 960px) {
+    .contact-page .item {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column; } }
 .contact-page .label {
   width: 35%;
   display: inline-block;
@@ -22,11 +41,61 @@
           flex-grow: 0;
   -ms-flex-negative: 0;
       flex-shrink: 0; }
-.contact-page .inputs {
+  @media (max-width: 960px) {
+    .contact-page .label {
+      width: 100%; } }
+@media (max-width: 960px) {
+  .contact-page input:not([type="radio"]):not([type="checkbox"]) {
+    height: 40px; } }
+
+.inputs {
   width: 75%;
   border-radius: 5px; }
-.contact-page .comment {
+  @media (max-width: 960px) {
+    .inputs {
+      width: 100%; } }
+
+.comment {
   height: 46px; }
+
+label {
+  font-size: 1.5rem; }
+  @media (max-width: 960px) {
+    label {
+      margin-bottom: 20px; } }
+
+.radio {
+  width: 75%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-top: 10px; }
+  @media (max-width: 960px) {
+    .radio {
+      width: 100%; } }
+  .radio input {
+    margin-left: 30px; }
+    @media (max-width: 960px) {
+      .radio input {
+        margin-left: 0; } }
+  @media (max-width: 960px) {
+    .radio label {
+      margin-bottom: 0; } }
+
+select,
+.file {
+  margin-left: 30px;
+  padding-top: 10px; }
+  @media (max-width: 960px) {
+    select,
+    .file {
+      margin-left: 0; } }
+
+@media (max-width: 960px) {
+  .impressions .label {
+    margin-bottom: 20px; } }
+.impressions select {
+  width: 155px; }
 
 /* --------------------
 

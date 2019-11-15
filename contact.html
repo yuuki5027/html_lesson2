@@ -9,7 +9,7 @@
 	<link rel="stylesheet" href="style.css">
 </head>
 
-<body>
+	<body class="contact-page">
 	<header>
 		<div class="header-inner">
 			<h1 class="logo"><a href="https://yuuki5027.github.io/html_lesson2/"><img src="img/naqualogo.png" alt=""></a></h1>
@@ -18,10 +18,10 @@
 			</nav>
 		</div>
 	</header>
-	<main class="contact-page">
-		<h1>お問い合わせ</h1>
+	<main>
+		<h1 class="title">お問い合わせ</h1>
 		<form action="thank.html">
-		
+
 			<div class="item">
 				<label for="name" class="label">名前：</label>
 				<input class="inputs" type="text" id="name" name="name">
@@ -31,20 +31,61 @@
 				<label for="mail" class="label">メール：</label>
 				<input class="inputs" type="email" id="mail" name="mail">
 			</div>
-			
+
 			<div class="item">
 				<label for="title" class="label">タイトル：</label>
 				<input class="inputs" type="text" id="title" name="title">
 			</div>
-			
+
 			<div class="item">
 				<label for="comment" class="label comment">質問内容：</label>
 				<textarea class="inputs" name="comment" id="comment" cols="30" rows="10"></textarea>
 			</div>
+
+			<div class="item">
+				<p class="label">感想：</p>
+				<div class="radio">
+					<input type="radio" id="good" name="answer" value="good"><label for="good">良かった</label>
+					<input type="radio" id="normal" name="answer" value="normal"><label for="normal">ふつう</label>
+					<input type="radio" id="bad" name="answer" value="bad"><label for="bad">悪かった</label>
+				</div>
+			</div>
+
+			<div class="item">
+				<p class="label">好きな魚：</p>
+				<div class="radio">
+					<input type="checkbox" id="same" name="fish" value="same"><label for="same">サメ</label>
+					<input type="checkbox" id="ei" name="fish" value="ei"><label for="ei">エイ</label>
+					<input type="checkbox" id="iruka" name="fish" value="iruka"><label for="iruka">イルカ</label>
+					<input type="checkbox" id="ei" name="fish" value="kurage"><label for="kurage">クラゲ</label>
+					<input type="checkbox" id="manbou" name="fish" value="manbou"><label for="manbou">マンボウ</label>
+				</div>
+			</div>
 			
+			<div class="item impressions">
+				<p class="label">感想：</p>
+				<select name="answer">
+					<option value="good">良かった</option>
+					<option value="normal">ふつう</option>
+					<option value="bad">悪かった</option>
+				</select>
+			</div>
+			
+			<div class="item">
+				<label for="file" class="label">ファイル：</label>
+				<input class="inputs file" type="file" id="file" name="file">
+			</div>
+			
+			<div class="item">
+				<p class="label">個人情報：</p>
+				<div class="radio">
+					<input type="checkbox" id="doui" name="kojinnjoho" value="doui"><label for="doui">個人情報の取り扱いに同意する</label>
+				</div>
+			</div>
+						
 			<div class="btn-area">
 				<input type="submit" value="送信する">
-			</div>			
+			</div>
 		</form>
 	</main>
 	<footer>
