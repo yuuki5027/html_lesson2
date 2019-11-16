@@ -1,5 +1,6 @@
 @import "mixin";
 @import "contact";
+@import "thanks";
 /* --------------------
 
 初期設定
@@ -9,6 +10,9 @@ body {
 	font-family: "游ゴシック Medium", YuGothic, YuGothicM, "Hiragino Kaku Gothic ProN", "Hiragino Kaku Gothic Pro", メイリオ, Meiryo, sans-serif;
 	background: linear-gradient(#fff 0%, #cfe1fc 100%);
 	background-repeat: no-repeat;
+}
+* {
+	box-sizing: border-box;
 }
 
 /* --------------------
@@ -354,6 +358,7 @@ header {
 		box-shadow: 0 5px 0 #aaa;
 		@include sp {
 			width: 150px;
+			padding: 12px 0;
 		}
 
 		&:hover {

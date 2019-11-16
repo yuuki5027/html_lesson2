@@ -1,0 +1,34 @@
+.thanks-page {
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+
+}
+
+.content-box {
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	text-align: center;
+
+	h2 {
+		font-size: 2.8rem;
+		margin-bottom: 60px;
+	}
+
+	p {
+		font-size: 1.6rem;
+		margin-bottom: 30px;
+	}
+
+	a {
+		font-size: 1.6rem;
+		color: #41487e;
+	}
+}
+
+.main {
+	display: flex;
+	align-items: center;
+	margin: auto;
+}

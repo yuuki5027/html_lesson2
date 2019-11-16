@@ -5,13 +5,14 @@
 	.header-inner {
 		max-width: 830px;
 	}
-
+	main {
+		margin-bottom: 80px;
+	}
 	.title,
 	form {
 		max-width: 830px;
 		margin: auto;
 		padding: 0 80px;
-
 		@include tab {
 			padding: 0 10px;
 		}
@@ -44,20 +45,126 @@
 		display: inline-block;
 		font-size: 1.6rem;
 		padding: 10px 20px;
-		border-left: 8px blue solid;
+		border-left: 8px #41487e solid;
 		flex-grow: 0;
 		flex-shrink: 0;
-
 		@include tab {
 			width: 100%;
+			padding: 10px;
 		}
 	}
 
-	input:not([type="radio"]):not([type="checkbox"]) {
+	input[type="text"],input[type="email"] {
+		padding: 10px;
 		@include tab {
-			height: 40px;
+			height: 30px;
+		}
+		&::placeholder {
+			color: #eee;
+			transition: 300ms;
+		}
+		&:focus::placeholder {
+			transform: translateX(30px);
+			opacity: 0;
 		}
 	}
+	input[type="radio"] {
+		display: none;
+		&+label {
+			padding-left: 20px;
+			margin-right: 20px;
+			position: relative;
+			&:before {
+				content: "";
+				display: block;
+				position: absolute;
+				top: -2px;
+				left: 0;
+				width: 15px;
+				height: 15px;
+				border: 1px solid #999;
+				border-radius: 50%;
+			}
+		}
+		&:checked {
+			&+label {
+				&:after {
+					content: "";
+					display: block;
+					position: absolute;
+					top: 2px;
+					left: 4px;
+					width: 9px;
+					height: 9px;
+					background: #41487e;
+					border-radius: 50%;
+				}
+			}
+		}
+	}
+	
+	input[type="checkbox"] {
+		display: none;
+		&+label {
+			padding-left: 20px;
+			margin-right: 20px;
+			position: relative;
+			@include sp {
+				margin-right: 10px;
+			}
+			@include sp-s {
+				padding-left: 16px;
+				margin-right: 5px;
+			}			
+			&:before {
+				content: "";
+				display: block;
+				position: absolute;
+				top: -2px;
+				left: 0;
+				width: 12px;
+				height: 12px;
+				border: 1px solid #999;
+			}
+		}
+		&:checked {
+			&+label {
+				&:after {
+					content: "";
+					display: block;
+					position: absolute;
+					top: -7px;
+					left: 5px;
+					width: 6px;
+					height: 13px;
+					transform: rotate(45deg);
+					border-bottom: 3px solid #41487e;
+					border-right: 3px solid #41487e;
+
+				}
+			}
+		}
+	}
+	.btn-area {
+		text-align: center;
+		input[type="submit"] {
+			border-style: none;
+			border-radius: 5px;
+			padding: 10px 30px;
+			background: #41487e;
+			color: #fff;
+			font-size: 16px;
+			font-weight: bold;
+			cursor: pointer;
+			transition: 300ms;
+			&:hover {
+				background: #1f275e;
+			}
+		}
+	}
+	
+		
+	
 	.inputs {
 		width: 75%;
 		border-radius: 5px;
@@ -130,5 +237,16 @@
 	footer {
 		margin-top: auto;
 	}
+	.title {
+		text-align: center;
+	}
+
+	textarea {
+		padding: 10px;
+	}
 }
+
+
+
+
 
